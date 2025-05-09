@@ -3,119 +3,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Banqberry – All Your Banks. One App.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banqberry – Coming Soon</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom, #ffffff, #e0f2ff);
-      color: #1f2937;
-    }
-    header, footer {
-      padding: 1rem 2rem;
+      background: linear-gradient(145deg, #f0f4ff, #e0e7ff);
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    .hero h2 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      flex-direction: column;
       justify-content: center;
-      padding: 4rem 2rem;
-    }
-    .feature {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      width: 300px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      align-items: center;
+      height: 100vh;
+      margin: 0;
       text-align: center;
     }
-    .waitlist {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    .waitlist input, .waitlist button {
-      padding: 0.75rem;
-      margin: 0.5rem;
-      border-radius: 0.5rem;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    .waitlist button {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    .waitlist button:hover {
-      background-color: #1d4ed8;
+    svg {
+      width: 240px;
+      height: auto;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 style="color:#1e40af;font-weight:800;font-size:1.5rem">Banqberry</h1>
-    <a href="#waitlist" style="background:#2563eb;color:white;padding:0.5rem 1rem;border-radius:1rem;text-decoration:none">Join Waitlist</a>
-  </header>
+  
+<svg width="240" height="250" viewBox="0 0 240 250" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .berry {
+      opacity: 0;
+      transform: scale(0.5);
+      transform-origin: center;
+      animation: pop 0.6s ease-out forwards;
+    }
+    .berry1 { animation-delay: 0.4s; fill: #6B1FB1; }
+    .berry2 { animation-delay: 1s; fill: #D52A7C; }
+    .berry3 { animation-delay: 1.6s; fill: #F4A300; }
+    .leaf   { animation-delay: 2.2s; fill: #1AB157; }
 
-  <section class="hero">
-    <h2>All Your Banks. One App.</h2>
-    <p>Banqberry unifies your entire financial life—bank accounts, cards, loans, and subscriptions—into one smart dashboard with personalized AI-powered insights.</p>
-    <div style="margin-top:2rem;">
-      <a href="#waitlist" style="background:#2563eb;color:white;padding:0.75rem 1.5rem;border-radius:1rem;text-decoration:none;font-size:1.1rem">Get Early Access</a>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <h3>Unified Dashboard</h3>
-      <p>See all your accounts, cards, and balances in one place—instantly.</p>
-    </div>
-    <div class="feature">
-      <h3>AI Recommendations</h3>
-      <p>Get the smartest financial product suggestions tailored to your behavior.</p>
-    </div>
-    <div class="feature">
-      <h3>Smart Alerts</h3>
-      <p>Stay ahead of bills, budget limits, and opportunities—all in real-time.</p>
-    </div>
-  </section>
-
-  <section id="waitlist" class="waitlist">
-    <h3>Join the Banqberry Waitlist</h3>
-    <form onsubmit="submitEmail(event)">
-      <input type="email" id="email" placeholder="Enter your email" required />
-      <button type="submit">Submit</button>
-    </form>
-    <p id="thanksMsg" style="color:green;font-weight:bold;display:none">Thanks for joining the waitlist!</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Banqberry. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function submitEmail(event) {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      if (email) {
-        console.log("Email submitted:", email);
-        document.getElementById('thanksMsg').style.display = 'block';
+    @keyframes pop {
+      to {
+        opacity: 1;
+        transform: scale(1);
       }
     }
-  </script>
+
+    text {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 28px;
+      fill: #1B2653;
+      animation: pop 0.5s ease-out 2.8s forwards;
+      opacity: 0;
+    }
+  </style>
+
+  <!-- Top Berries -->
+  <circle class="berry berry1" cx="90" cy="100" r="30"/>
+  <circle class="berry berry2" cx="150" cy="100" r="30"/>
+
+  <!-- Bottom Center Berry -->
+  <circle class="berry berry3" cx="120" cy="160" r="30"/>
+
+  <!-- Leaf -->
+  <path class="berry leaf" d="M120 50 Q110 20, 140 25 Q135 50, 120 50 Z"/>
+
+  <!-- Text -->
+  <text x="50" y="230">Banqberry</text>
+</svg>
+
+  <h1 style="color: #1B2653; font-size: 32px; margin-top: 30px;">Coming Soon</h1>
+  <p style="color: #5a5a5a; font-size: 18px;">Your financial life. Unified. Smart. Private.</p>
 </body>
 </html>
